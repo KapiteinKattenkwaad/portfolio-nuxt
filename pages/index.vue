@@ -3,39 +3,21 @@
   <div id="header">
   <div class="overlay"></div>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+    <source src="~assets/programming-ide.mp4" type="video/mp4">
   </video>
   <div class="container h-100">
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-100 text-white">
-        <h1 class="display-3">Video Header</h1>
-        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
+        <h1 class="display-3">Max Stouten</h1>
+        <p class="lead mb-0">Web Developer</p>
       </div>
     </div>
   </div>
 </div>
 
-<section class="my-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 mx-auto">
-        <p>The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are build into Bootstrap 4.</p>
-        <p>The overlay color can be changed by changing the <code>background-color</code> of the <code>.overlay</code> class in the CSS.</p>
-        <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
-        <p class="mb-0">
-          Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+
 </div>
-<!--
-  <section class="container">
-    <h1>Max Stouten</h1>
-     <p class="subheading">Web developer</p>
-     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ratione iusto neque dignissimos quasi veniam animi ipsum consequatur sapiente? Fugiat similique laudantium ullam nam fugit eos expedita a eum inventore.</p>
-  </section> -->
+
 </template>
 
 <script>
@@ -61,7 +43,7 @@ export default {
 #header {
   position: relative;
   background-color: black;
-  height: 75vh;
+  height: 100vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;

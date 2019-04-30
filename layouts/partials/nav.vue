@@ -1,16 +1,23 @@
 <template>
-    <header>
-       <nuxt-link to="/" class="logo">Nuxty</nuxt-link>
+<div>
+    
+  <b-navbar toggleable="lg" type="" variant="" fixed="top" >
+    <b-navbar-brand href="/">NavBar</b-navbar-brand>
 
-       <nav>
-           <ul>
-               <li><nuxt-link to="/" >Home</nuxt-link></li>
-               <li><nuxt-link to="about" >About</nuxt-link></li>
-               <li><nuxt-link to="services" >Services</nuxt-link></li>
-               <li><nuxt-link to="contact" >Contact</nuxt-link></li>
-           </ul>
-       </nav>
-    </header>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav align="right">
+      <b-navbar-nav >
+         
+            <b-nav-item href="work">Work</b-nav-item> 
+            <b-nav-item href="about">About</b-nav-item>
+            <b-nav-item href="contact">Contact</b-nav-item>
+         
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
+    
 </template>
 
 <script>
@@ -21,33 +28,48 @@ export default {
 
 <style>
 
-header {
-        background: rgb(0, 219, 146);
-        display: grid;
-        grid-template-columns: repeat(2,auto);
+    .navbar {
+        background: transparent;
+        color: whitesmoke;
     }
-    .logo, li a {
-        padding: 1em 2em;
-        display: block;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-        font-size: .9em;
+
+    div#nav-collapse {
+         flex-direction: row-reverse;
     }
-    nav {
-        justify-self: right;
+
+    a.nav-link {
+        margin-left: 3rem;
+        color: whitesmoke;
+        font-size: 1.8rem;
     }
-    ul {
-        list-style-type: none;
+
+     li > a:hover {
+ box-shadow: 0 4px 0 0 #F15A29 !important; /*** COLOR AND THICKNESS OF THE LINE ON HOVER ***/
+ padding-bottom: 15px;
+ opacity: 1 !important;
+}
+ li li a {
+ padding-bottom: 6px !important;
+}
+ li.current-menu-item > a,
+.et-fixed-header #top-menu li.current-menu-item > a {
+ border: 10px solid #F15A29; /*** COLOR AND THICKNESS OF THE BOX ***/
+ padding: 10px;
+ margin-bottom: -10px;
+}
+
+
+
+    .navbar-brand {
+        color: 1.8rem;
+        color: whitesmoke;
     }
-    li {
-        display: inline;
-    }
+
+   
+
     li a {
         padding: 1em 2em;
-        display: inline-block;
-        background: rgba(0,0,0,0.1);
+       
     }
 
 </style>
