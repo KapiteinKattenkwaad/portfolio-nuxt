@@ -8,9 +8,30 @@
 </template>
 
 <style>
+
 body {
   color: whitesmoke;
-background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);}
+ 
+       background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+   
+
+}
+
+.container {
+        margin: 5em;
+        margin-top: 10em;
+    }
+
+  .page-enter-active, .page-leave-active {
+    transition: opacity .5s;
+  }
+  .page-enter, .page-leave-to {
+    opacity: 0;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
 
 *,
 *:before,
@@ -19,34 +40,7 @@ background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>
 
 <script>

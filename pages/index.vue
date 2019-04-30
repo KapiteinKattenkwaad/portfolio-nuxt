@@ -39,6 +39,20 @@ export default {
 </script>
 
 <style>
+h1, .display-3 {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.w-100.text-white {
+  margin-bottom: 10em;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: opacity .8s;
+  }
+  .page-enter, .page-leave-to {
+    opacity: 0;
+  }
 
 #header {
   position: relative;

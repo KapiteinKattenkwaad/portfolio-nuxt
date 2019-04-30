@@ -1,54 +1,111 @@
 <template>
-  <div>
-    <b-alert show>Default Alert</b-alert>
+  <div class="container">
 
-    <b-alert variant="success" show>Success Alert</b-alert>
+  <h1>Contact</h1>
+ 
+    <b-form>
+      <b-form-group
+        id="input-group-1"
+        label="Email address:"
+        label-for="input-1"
+      >
+        <b-form-input
+          id="input-1"
+         
+          type="email"
+          size="lg"
+          required
+          placeholder="Enter email"
+        ></b-form-input>
+      </b-form-group>
 
-    <b-alert v-model="showDismissibleAlert" variant="danger" dismissible>
-      Dismissible Alert!
-    </b-alert>
+      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          required
+          size="lg"
+          placeholder="Enter name"
+        ></b-form-input>
+      </b-form-group>
 
-    <b-alert
-      :show="dismissCountDown"
-      dismissible
-      variant="warning"
-      @dismissed="dismissCountDown=0"
-      @dismiss-count-down="countDownChanged"
-    >
-      <p>This alert will dismiss after {{ dismissCountDown }} seconds...</p>
-      <b-progress
-        variant="warning"
-        :max="dismissSecs"
-        :value="dismissCountDown"
-        height="4px"
-      ></b-progress>
-    </b-alert>
+      <b-form-group id="input-group-3" label="Your Message:" label-for="input-3">
+          
+        <b-form-textarea
+          id="input-3"
+          required
+          size="lg"
+        ></b-form-textarea>
+      </b-form-group>
 
-    <b-button @click="showAlert" variant="info" class="m-1">
-      Show alert with count-down timer
-    </b-button>
-    <b-button @click="showDismissibleAlert=true" variant="info" class="m-1">
-      Show dismissible alert ({{ showDismissibleAlert ? 'visible' : 'hidden' }})
-    </b-button>
+
+      <b-button id="send" type="submit" variant="primary">Send</b-button>
+    </b-form>
+    
+  
+       <p>Or contact me at <a class="contact" href="mailto:info@maxstouten.com">info@maxstouten.com</a> </p>
+   
+ 
+
+    
   </div>
+
 </template>
 
 <script>
   export default {
-    data() {
-      return {
-        dismissSecs: 10,
-        dismissCountDown: 0,
-        showDismissibleAlert: false
-      }
-    },
-    methods: {
-      countDownChanged(dismissCountDown) {
-        this.dismissCountDown = dismissCountDown
-      },
-      showAlert() {
-        this.dismissCountDown = this.dismissSecs
-      }
-    }
   }
+
 </script>
+
+<style>
+
+   
+    h1 {
+        margin-bottom: 2em;
+        font-family: 'Libre Franklin', sans-serif;
+    }
+
+  #input-1, #input-2, #input-3 {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid maroon;
+      color: maroon;
+  }
+
+  #input-1::placeholder, #input-2::placeholder, #input-3::placeholder {
+      color: maroon;
+      opacity: 0.4;
+  }
+
+  ::placeholder {
+      color: maroon;
+  }
+
+   #input-1:focus, #input-2:focus, #input-3:focus {
+       border: none;
+   }
+
+    #send {
+        background-color: maroon;
+        width: 3.2em;
+        height: 2em;
+        font-size: 2em;
+        margin: 0.8em 0 1em 0;
+    }
+
+    #send:hover {
+        transform: scale(1.1);
+        animation-duration: 0.1s;
+        background-color: #bf0000;
+    }
+
+     .contact{
+        color: maroon;
+    }
+
+    .contact:hover {
+        color: #F15A29;
+    }
+
+</style>
+

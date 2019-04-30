@@ -1,14 +1,22 @@
+@import 'bootstrap_variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+
+
 body, html {
     font-family: Montserrat;
 }
 
 section {
+    margin-top: 5em;
     padding: 5em;
 }
 
 h1 {
     font-size: 1.5em;
     text-transform: uppercase;
+    color: red;
+    margin-bottom: 4em;
+    font-family: 'Righteous', cursive;
 }
 
 .subheading {
